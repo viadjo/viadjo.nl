@@ -227,13 +227,13 @@ function initParallax() {
 
         if (rect.top < windowH && rect.bottom > 0) {
             const progress = (windowH - rect.top) / (windowH + rect.height);
-            const offset = (progress - 0.5) * 60;
-            aboutImage.style.transform = `translateY(${offset}px) scale(1.08)`;
+            const offset = (progress - 0.5) * 120;
+            aboutImage.style.transform = `translateY(${offset}px) scale(1.15)`;
         }
     }, { passive: true });
 
     // Initial scale for parallax
-    aboutImage.style.transform = 'scale(1.08)';
+    aboutImage.style.transform = 'scale(1.15)';
 }
 
 /* ==========================================================================
