@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViaDjo - Your Personal Real Estate Agent in Amsterdam</title>
+    <meta name="description" content="ViaDjo is your personal real estate agent in Amsterdam. Buying, selling or investing - Djoke Hoogland guides you through the Amsterdam property market.">
+    <meta property="og:title" content="ViaDjo - Your Personal Real Estate Agent in Amsterdam">
+    <meta property="og:description" content="Personal real estate guidance in Amsterdam. Buying, selling, and investing with expert local knowledge.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.viadjo.nl/en/">
+    <meta property="og:image" content="images/hero.jpg">
+    <!-- Favicon: modern standards (2024+) -->
+    <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="images/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://use.typekit.net/ehm6due.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <img src="images/logo-white.png" alt="ViaDjo - Real Estate Amsterdam" width="180" height="71" class="logo-white">
+                <img src="images/logo.png" alt="ViaDjo - Real Estate Amsterdam" width="180" height="71" class="logo-color">
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about">About Djo</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#real-estate">Real Estate</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                    <li><a href="#references">References</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Your personal real estate agent in Amsterdam</h1>
+                <p class="hero-subtitle">Welcome</p>
+                <a href="#about" class="btn btn-primary">Welcome</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <!-- Replace with actual portrait photo -->
+                        <img src="images/djoke-portrait.jpg" alt="Djoke Hoogland - Real Estate Agent Amsterdam">
+                        <img src="images/certification-banner.png" alt="NVM Certified Real Estate Agent" class="certification-badge">
+                    </div>
+                    <div class="about-text">
+                        <h2>Djoke Hoogland</h2>
+                        <p class="lead">Amsterdam is a nice place to live and work. I would like to make that possible for you too.</p>
+                        <p>Are you looking for a new house, an investment, commercial real estate or do you want to sell? I like to help you to make the right decision. ViaDjo is my real estate agency, situated in the centre of Amsterdam.</p>
+                        <p>I have been working in the area of real estate in Amsterdam since 2007. I work as a real estate broker or on own developments. I am experienced in both, the private sector as the commercial area and have studied economics at the University of Amsterdam.</p>
+                        <a href="#services" class="btn btn-primary">My services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services" id="services">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/>
+                            </svg>
+                        </div>
+                        <h3>Buying in Amsterdam</h3>
+                        <p>I have been living in Amsterdam for 25 years and I know the city very well. I can tell you about the different neighbourhoods, price levels and I am up to date on new local developments.</p>
+                        <button class="btn btn-secondary service-toggle" data-target="buying-details">Read more</button>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Selling in Amsterdam</h3>
+                        <p>Ready to sell your valuable house in Amsterdam? This won't be difficult in this market. There are many people who are looking for a new place and prices are still going up.</p>
+                        <button class="btn btn-secondary service-toggle" data-target="selling-details">Read more</button>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                                <path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
+                            </svg>
+                        </div>
+                        <h3>Investing in Amsterdam</h3>
+                        <p>Do you own an apartment or a whole building or do you want to buy real estate to have an income out of it? I will calculate your possible revenue and can advise you on local rules.</p>
+                        <button class="btn btn-secondary service-toggle" data-target="investing-details">Read more</button>
+                    </article>
+                </div>
+
+                <!-- Service Details (expanded) -->
+                <div class="service-details" id="buying-details">
+                    <div class="service-details-inner">
+                        <h3>Buying in Amsterdam</h3>
+                        <p>First we decide on budget and strategy for buying on this difficult market. The Amsterdam real estate market is very hot. A lot of people like to live and work in Amsterdam, but much less properties are being offered.</p>
+                        <p>Success can only be reached by focus, personal attention and good communication. Together we look through offered houses, go to viewings and we discuss the right bid. If you have very little time for viewings, I can do the first one to check if it is an option.</p>
+                        <p>I'd like to help you to make the right decision. Full guidance up to the handover of the keys (10-step principle). I work on a fixed price or hourly basis. Depending on your wishes!</p>
+                        <button class="btn btn-secondary close-details">Close</button>
+                    </div>
+                </div>
+                <div class="service-details" id="selling-details">
+                    <div class="service-details-inner">
+                        <h3>Selling in Amsterdam</h3>
+                        <p>I will guide you from the initial interview all the way to the final signature from your property's buyer. I can provide you with the latest transaction-data and together we will make the best deal for you.</p>
+                        <p>Full guidance up to the handover of the keys (10-step principle). I work on a fixed price or on a percentage from selling price. Depending on your wishes!</p>
+                        <button class="btn btn-secondary close-details">Close</button>
+                    </div>
+                </div>
+                <div class="service-details" id="investing-details">
+                    <div class="service-details-inner">
+                        <h3>Investing in Amsterdam</h3>
+                        <p>Amsterdam has its own regulations and you have to deal with the Dutch tenancy laws. A custom-made overview of your return of investment, publication of your house on the popular rental sites and a rental agreement with a reliable tenant!</p>
+                        <p>Like I'm your personal adviser.</p>
+                        <button class="btn btn-secondary close-details">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Estate Section -->
+        <section class="section real-estate" id="real-estate">
+            <div class="container">
+                <h2 class="section-title">Real Estate</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Show all</button>
+                    <button class="filter-btn" data-filter="for-sale">For sale</button>
+                    <button class="filter-btn" data-filter="sold">Sold</button>
+                    <button class="filter-btn" data-filter="rented">Rented</button>
+                </div>
+                <div class="portfolio-grid">
+                    <article class="portfolio-item" data-category="for-sale">
+                        <div class="portfolio-image">
+                            <img src="images/property-1.jpg" alt="Vrolikstraat 100 IV-14, Amsterdam">
+                            <span class="portfolio-badge for-sale">For sale</span>
+                        </div>
+                        <h4>Vrolikstraat 100 IV-14</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="for-sale">
+                        <div class="portfolio-image">
+                            <img src="images/property-2.jpg" alt="Overtoom 136-2, Amsterdam">
+                            <span class="portfolio-badge for-sale">For sale</span>
+                        </div>
+                        <h4>Overtoom 136-2</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="for-sale">
+                        <div class="portfolio-image">
+                            <img src="images/property-3.jpg" alt="Prinsengracht 504c, Amsterdam">
+                            <span class="portfolio-badge for-sale">For sale</span>
+                        </div>
+                        <h4>Prinsengracht 504c</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="for-sale">
+                        <div class="portfolio-image">
+                            <img src="images/property-4.jpg" alt="President Kennedylaan 126 hs, Amsterdam">
+                            <span class="portfolio-badge for-sale">For sale</span>
+                        </div>
+                        <h4>President Kennedylaan 126 hs</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="sold">
+                        <div class="portfolio-image">
+                            <img src="images/property-5.jpg" alt="Gerard Brandtstraat 16 hs, Amsterdam">
+                            <span class="portfolio-badge sold">Sold</span>
+                        </div>
+                        <h4>Gerard Brandtstraat 16 hs</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="sold">
+                        <div class="portfolio-image">
+                            <img src="images/property-6.jpg" alt="Flevolaan 159, Amsterdam">
+                            <span class="portfolio-badge sold">Sold</span>
+                        </div>
+                        <h4>Flevolaan 159</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="sold">
+                        <div class="portfolio-image">
+                            <img src="images/property-7.jpg" alt="Nicolaas Witsenkade 11b, Amsterdam">
+                            <span class="portfolio-badge sold">Sold</span>
+                        </div>
+                        <h4>Nicolaas Witsenkade 11b</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="sold">
+                        <div class="portfolio-image">
+                            <img src="images/property-8.jpg" alt="Olifantswerf 12, Amsterdam">
+                            <span class="portfolio-badge sold">Sold</span>
+                        </div>
+                        <h4>Olifantswerf 12</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="sold">
+                        <div class="portfolio-image">
+                            <img src="images/property-9.jpg" alt="Lomanstraat 82-4, Amsterdam">
+                            <span class="portfolio-badge sold">Sold</span>
+                        </div>
+                        <h4>Lomanstraat 82-4</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="sold">
+                        <div class="portfolio-image">
+                            <img src="images/property-10.jpg" alt="Pieter de Hoochstraat 5A, Amsterdam">
+                            <span class="portfolio-badge sold">Sold</span>
+                        </div>
+                        <h4>Pieter de Hoochstraat 5A</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="rented">
+                        <div class="portfolio-image">
+                            <img src="images/property-11.jpg" alt="Ottho Heldringstraat 33x, Amsterdam">
+                            <span class="portfolio-badge rented">Rented</span>
+                        </div>
+                        <h4>Ottho Heldringstraat 33x</h4>
+                    </article>
+                    <article class="portfolio-item" data-category="rented">
+                        <div class="portfolio-image">
+                            <img src="images/property-12.jpg" alt="Overtoom 564-3, Amsterdam">
+                            <span class="portfolio-badge rented">Rented</span>
+                        </div>
+                        <h4>Overtoom 564-3</h4>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section tips" id="tips">
+            <div class="container">
+                <h2 class="section-title">Tips</h2>
+                <div class="tips-grid">
+                    <article class="tip-card">
+                        <h4>Do your children plan to study in Amsterdam?</h4>
+                        <p>Find out what you need to know about student housing and buying an apartment for your child in Amsterdam.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h4>Traveltime to work is the most important factor in house searching</h4>
+                        <p>How commuting time affects your property search and what options Amsterdam offers.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h4>Do you need a Personal Shopper?</h4>
+                        <p>What a personal property shopper does and when you might benefit from one.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h4>Foundation of Amsterdam houses</h4>
+                        <p>Understanding the different types of foundations in Amsterdam and what to check before buying.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h4>What about the WOZ-value of a property?</h4>
+                        <p>The WOZ-value explained and how it affects your property taxes and mortgage options.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h4>Groundlease which has not been bought-off influences your mortgage-capacity!</h4>
+                        <p>Important information about erfpacht (ground lease) and its impact on financing.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="section references" id="references">
+            <div class="container">
+                <h2 class="section-title">What people say</h2>
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <div class="testimonial active">
+                        <blockquote>
+                            <p>"Djoke Hoogland helped us very well. She understood what we wanted and put herself in our position when providing advice. She served our interests. Both when making our choice and when determining the bid price. We passed within a week and &ndash; thanks to Djoke &ndash; paid well less than we thought we had to offer. She more than earned her fee back."</p>
+                        </blockquote>
+                        <cite>Of good help</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"It is very pleasant to work with Djoke, she has a lot of expertise, gives honest advice and is always easily accessible. Her service goes far beyond a business transaction; she is sincere and personally involved and remains calm under all circumstances. The latter is especially nice in the hectic current Amsterdam housing market! Thanks to her we found a super nice place on the IJ in Amsterdam North."</p>
+                        </blockquote>
+                        <cite>Frans and Iris &mdash; Good advice</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"We met Djoke a few years ago when we were looking for a property in Amsterdam. Following this pleasant collaboration at the time, we approached Djoke again for a new search. We were able to purchase a beautiful apartment in no time. With her determination, flexibility and clear expertise, it is not only very pleasant to work with Djoke, but you also get results quickly. Searching for a home will be a pleasant endeavor with Djoke by your side."</p>
+                        </blockquote>
+                        <cite>Yolanda, Thomas &amp; Gioia &mdash; Pleasant collaboration</cite>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-prev" aria-label="Previous testimonial">&larr;</button>
+                        <div class="testimonial-dots">
+                            <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+                            <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+                            <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+                        </div>
+                        <button class="testimonial-next" aria-label="Next testimonial">&rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact me</h2>
+                <p class="section-subtitle">Shall we drink coffee?</p>
+                <div class="contact-grid">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">I accept the <a href="#" target="_blank">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>ViaDjo</h3>
+                        <address>
+                            <p>1e Weteringdwarsstraat 62 hs<br>1017 TP Amsterdam</p>
+                            <p><a href="tel:+31641209868">06-41209868</a></p>
+                            <p><a href="mailto:info@viadjo.nl">info@viadjo.nl</a></p>
+                        </address>
+                        <p class="kvk">KvK: 73158593</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/djoke-hoogland-0a854313/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <p>ViaDjo<br>1e Weteringdwarsstraat 62 hs<br>1017 TP Amsterdam<br>06-41209868</p>
+                    </div>
+                    <div class="footer-col">
+                        <p><a href="mailto:info@viadjo.nl">info@viadjo.nl</a><br>KvK: 73158593</p>
+                    </div>
+                    <div class="footer-col">
+                        <a href="terms.html">General Terms and Conditions</a>
+                        <a href="privacy.html">Privacy policy and cookie stuff</a>
+                        <a href="10-steps-buying.html"><strong>Download 10 steps to successful buying</strong></a>
+                        <a href="10-steps-selling.html"><strong>Download 10 steps to successful selling</strong></a>
+                    </div>
+                    <div class="footer-col footer-phone">
+                        <span class="phone-number">06-41209868</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 ViaDjo All rights reserved | Website: Bas van der Paardt</p>
+                <a href="https://www.linkedin.com/in/djoke-hoogland-0a854313/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
