@@ -7,3 +7,4 @@ funda-sync/venv/
 __pycache__/
 media/properties/
 website/images/properties/
+.vercel

@@ -448,7 +448,6 @@ function buildTipPage(tip, lang, siteData, components) {
     <link rel="icon" href="${assetPrefix}images/favicon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="${assetPrefix}images/apple-touch-icon.png">
     <link rel="manifest" href="${assetPrefix}manifest.json">
-    <link rel="stylesheet" href="https://use.typekit.net/${siteData.site.typekit_id}.css">
     <link rel="stylesheet" href="${assetPrefix}css/style.css">
 </head>
 <body class="subpage">
@@ -555,7 +554,6 @@ function buildPage(pageFile, lang, siteData, components) {
     <link rel="icon" href="${assetPrefix}images/favicon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="${assetPrefix}images/apple-touch-icon.png">
     <link rel="manifest" href="${assetPrefix}manifest.json">
-    <link rel="stylesheet" href="https://use.typekit.net/${siteData.site.typekit_id}.css">
     <link rel="stylesheet" href="${assetPrefix}css/style.css">
 </head>
 <body${pageMeta.bodyClass ? ` class="${pageMeta.bodyClass}"` : ''}>
@@ -573,7 +571,7 @@ ${html}
 
 function concatCSS() {
     const order = [
-        'variables.css', 'base.css', 'header.css', 'hero.css', 'about.css',
+        'fonts.css', 'variables.css', 'base.css', 'header.css', 'hero.css', 'about.css',
         'services.css', 'portfolio.css', 'tips.css', 'testimonials.css',
         'contact.css', 'footer.css', 'subpage.css', 'utilities.css'
     ];
@@ -646,6 +644,10 @@ function build() {
     console.log('  Concatenating JS...');
     ensureDir(path.join(DIST, 'js'));
     fs.writeFileSync(path.join(DIST, 'js', 'script.js'), concatJS(), 'utf-8');
+
+    // Copy fonts
+    console.log('  Copying fonts...');
+    copyDirRecursive(path.join(WEBSITE, 'fonts'), path.join(DIST, 'fonts'));
 
     // Copy images (shared, in root)
     console.log('  Copying images...');

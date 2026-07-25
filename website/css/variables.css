@@ -24,7 +24,7 @@
     --color-footer-dark: #1b1d1f;
     --color-border: #eaeaea;
 
-    --font-family: urw-din, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --font-family: 'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     --font-size-base: 16px;
     --font-size-sm: 13px;
     --font-size-md: 20px;
