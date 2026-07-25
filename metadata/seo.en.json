@@ -1,0 +1,43 @@
+{
+  "index": {
+    "title": "ViaDjo - Your Personal Real Estate Agent in Amsterdam",
+    "description": "ViaDjo is your personal real estate agent in Amsterdam. Buying, selling or investing - Djoke Hoogland guides you through the Amsterdam property market.",
+    "og_title": "ViaDjo - Your Personal Real Estate Agent in Amsterdam",
+    "og_description": "Personal real estate guidance in Amsterdam. Buying, selling, and investing with expert local knowledge.",
+    "og_image": "images/hero.jpg"
+  },
+  "terms": {
+    "title": "Algemene Voorwaarden - ViaDjo",
+    "description": "Algemene voorwaarden van ViaDjo, uw persoonlijke makelaar in Amsterdam.",
+    "og_title": "Algemene Voorwaarden - ViaDjo",
+    "og_description": "Algemene voorwaarden van ViaDjo makelaar Amsterdam."
+  },
+  "privacy": {
+    "title": "Privacy Policy and Cookie Stuff - ViaDjo",
+    "description": "Privacyverklaring van ViaDjo. Lees hoe wij omgaan met uw persoonsgegevens.",
+    "og_title": "Privacy Policy - ViaDjo",
+    "og_description": "Privacyverklaring van ViaDjo makelaar Amsterdam."
+  },
+  "10-steps-buying": {
+    "title": "10 Steps to Successful Buying - ViaDjo",
+    "description": "ViaDjo guides you through 10 steps to successfully buy a property in Amsterdam.",
+    "og_title": "10 Steps to Successful Buying - ViaDjo",
+    "og_description": "10 steps to successfully buying a property in Amsterdam with ViaDjo."
+  },
+  "10-steps-selling": {
+    "title": "10 Steps to Successful Selling - ViaDjo",
+    "description": "ViaDjo guides you through 10 steps to successfully sell your property in Amsterdam.",
+    "og_title": "10 Steps to Successful Selling - ViaDjo",
+    "og_description": "10 steps to successfully selling your property in Amsterdam with ViaDjo."
+  },
+  "tips": {
+    "title": "Tips - ViaDjo",
+    "description": "Useful real estate tips for Amsterdam from ViaDjo.",
+    "og_title": "Tips - ViaDjo",
+    "og_description": "Useful real estate tips for Amsterdam from ViaDjo."
+  },
+  "404": {
+    "title": "Page Not Found - ViaDjo",
+    "description": "This page does not exist."
+  }
+}

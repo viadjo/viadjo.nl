@@ -1,0 +1,21 @@
+<header class="site-header{{#subpage}} scrolled{{/subpage}}" id="header">
+    <div class="header-inner">
+        <a href="{{baseUrl}}index.html" class="logo">
+            <img src="{{assetPrefix}}images/logo-white.png" alt="ViaDjo - Real Estate Amsterdam" width="180" height="71" class="logo-white">
+            <img src="{{assetPrefix}}images/logo.png" alt="ViaDjo - Real Estate Amsterdam" width="180" height="71" class="logo-color">
+        </a>
+        <nav class="main-nav" id="main-nav">
+            <ul class="nav-list">
+                {{#menuItems}}
+                <li><a href="{{baseUrl}}{{href}}">{{label}}</a></li>
+                {{/menuItems}}
+                <li class="lang-switch"><a href="{{langSwitchHref}}">{{langSwitchLabel}}</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>

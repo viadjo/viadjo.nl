@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Subpages
+   ========================================================================== */
+.subpage .site-header {
+    position: fixed;
+    background-color: var(--color-surface);
+    box-shadow: none;
+}
+
+.subpage .site-header.scrolled {
+    background-color: var(--color-surface);
+    box-shadow: none;
+}
+
+.page-banner {
+    background-color: var(--color-surface);
+    padding: 120px 0 50px;
+}
+
+.page-banner h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin: 0;
+    padding-bottom: 20px;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.page-content {
+    padding: 50px 0 80px;
+}
+
+.page-content h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 40px;
+}
+
+.page-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+.page-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    margin-top: 28px;
+    margin-bottom: 10px;
+}
+
+.page-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.page-content ul {
+    margin: 0 0 16px 20px;
+    padding: 0;
+    list-style: disc;
+}
+
+.page-content ul li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    list-style-type: disc;
+}
+
+.page-content a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.page-content a:hover {
+    color: var(--color-accent-hover);
+}
+
+.page-intro {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Steps layout */
+.steps {
+    counter-reset: none;
+}
+
+.step {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.step:last-child {
+    border-bottom: none;
+}
+
+.step h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--color-heading);
+}
+
+.step-number {
+    color: var(--color-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.step p {
+    margin-bottom: 8px;
+}
+
+.step p:last-child {
+    margin-bottom: 0;
+}

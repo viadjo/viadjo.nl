@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "label": "Over Djo", "href": "#about" },
+    { "label": "Diensten", "href": "#services" },
+    { "label": "Vastgoed", "href": "#real-estate" },
+    { "label": "Tips", "href": "#tips" },
+    { "label": "Referenties", "href": "#references" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "langSwitch": {
+    "label": "English",
+    "href": "en/index.html"
+  }
+}

@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Testimonials / References Section
+   ========================================================================== */
+.references {
+    background-color: var(--color-white);
+    padding: 90px 0;
+}
+
+.references .section-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.testimonials-slider {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial {
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial blockquote {
+    font-size: var(--font-size-md);
+    line-height: 1.8;
+    color: var(--color-text);
+    font-style: italic;
+    margin-bottom: 24px;
+    quotes: none;
+}
+
+.testimonial blockquote p {
+    margin: 0;
+}
+
+.testimonial cite {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-heading);
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+.testimonial-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.testimonial-prev,
+.testimonial-next {
+    background: none;
+    border: 1px solid var(--color-gray-light);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    color: var(--color-text);
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+    border-color: var(--color-heading);
+    color: var(--color-heading);
+    background: transparent;
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-gray-light);
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.dot.active {
+    background-color: var(--color-accent);
+}

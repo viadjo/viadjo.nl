@@ -1,0 +1,23 @@
+<section class="section real-estate" id="real-estate">
+    <div class="container">
+        <h2 class="section-title">{{content.section_real_estate}}</h2>
+        <div class="portfolio-filters">
+            {{#filterButtons}}
+            <button class="filter-btn{{#active}} active{{/active}}" data-filter="{{filter}}">{{label}}</button>
+            {{/filterButtons}}
+        </div>
+        <div class="portfolio-grid">
+            {{#listings}}
+            <article class="portfolio-item" data-category="{{category}}">
+                <a href="{{url}}" target="_blank" rel="noopener">
+                    <div class="portfolio-image">
+                        <img src="{{assetPrefix}}images/properties/{{id}}.jpg" alt="{{title}}, {{city}}">
+                        <span class="portfolio-badge {{category}}">{{status}}</span>
+                    </div>
+                    <h4>{{title}} <span class="portfolio-price">&euro; {{price}}</span></h4>
+                </a>
+            </article>
+            {{/listings}}
+        </div>
+    </div>
+</section>

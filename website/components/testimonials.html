@@ -1,0 +1,24 @@
+<section class="section references" id="references">
+    <div class="container">
+        <h6 class="section-title">{{content.section_references}}</h6>
+        <div class="testimonials-slider" id="testimonials-slider">
+            {{#testimonials}}
+            <div class="testimonial{{#first}} active{{/first}}">
+                <blockquote>
+                    <p>"{{body}}"</p>
+                </blockquote>
+                <cite>{{cite}}</cite>
+            </div>
+            {{/testimonials}}
+            <div class="testimonial-nav">
+                <button class="testimonial-prev" aria-label="Previous testimonial">&larr;</button>
+                <div class="testimonial-dots">
+                    {{#testimonials}}
+                    <button class="dot{{#first}} active{{/first}}" data-index="{{index}}" aria-label="Testimonial {{indexPlusOne}}"></button>
+                    {{/testimonials}}
+                </div>
+                <button class="testimonial-next" aria-label="Next testimonial">&rarr;</button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<section class="section services" id="services">
+    <div class="container">
+        <h2 class="section-title">{{content.section_services}}</h2>
+        <div class="services-grid">
+            {{#services}}
+            <article class="service-card">
+                <div class="service-icon">
+                    {{iconSvg}}
+                </div>
+                <h3>{{title}}</h3>
+                <p>{{summary}}</p>
+                <button class="btn btn-secondary service-toggle" data-target="{{id}}-details">Read more</button>
+            </article>
+            {{/services}}
+        </div>
+
+        {{#services}}
+        <div class="service-details" id="{{id}}-details">
+            <div class="service-details-inner">
+                <h3>{{title}}</h3>
+                {{details_html}}
+                <button class="btn btn-secondary close-details">Close</button>
+            </div>
+        </div>
+        {{/services}}
+    </div>
+</section>

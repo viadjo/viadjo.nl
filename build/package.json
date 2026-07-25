@@ -1,0 +1,12 @@
+{
+  "name": "viadjo-build",
+  "version": "1.0.0",
+  "description": "Static site generator for ViaDjo website",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch"
+  },
+  "dependencies": {},
+  "private": true
+}

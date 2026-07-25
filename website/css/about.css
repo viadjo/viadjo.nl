@@ -1,0 +1,100 @@
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+.about {
+    background-color: var(--color-white);
+    padding: 0;
+}
+
+.about .container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 80vh;
+}
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-accent);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.about-image img:first-child {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.certification-badge {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+    max-width: 180px;
+    z-index: 3;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px;
+    max-width: 600px;
+}
+
+.about-name {
+    position: absolute;
+    bottom: 80px;
+    left: 36px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    z-index: 3;
+    margin: 0;
+}
+
+.about-text .lead {
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    color: var(--color-heading);
+    margin-bottom: 30px;
+    line-height: 1.25;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    color: var(--color-text);
+    line-height: 1.75;
+    font-size: var(--font-size-base);
+}
+
+.about-text .lead + p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+.about-text .btn {
+    display: none;
+}

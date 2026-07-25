@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact {
+    background-color: var(--color-light);
+    padding: 90px 0;
+}
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--color-gray-light);
+    border-radius: 0;
+    font-family: inherit;
+    font-size: var(--font-size-base);
+    color: var(--color-heading);
+    background: transparent;
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkbox input {
+    width: auto;
+}
+
+.form-checkbox label {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.contact-info {
+    padding-top: 0;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-heading);
+    margin-bottom: 24px;
+}
+
+.contact-info address p {
+    margin-bottom: 6px;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.contact-info a {
+    color: var(--color-text-muted);
+}
+
+.contact-info a:hover {
+    color: var(--color-accent);
+}
+
+.kvk {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.social-links {
+    margin-top: 24px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transition: opacity var(--transition);
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+    color: var(--color-white);
+}

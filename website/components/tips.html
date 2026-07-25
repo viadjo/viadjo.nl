@@ -1,0 +1,20 @@
+<section class="section tips" id="tips">
+    <div class="container">
+        <h2 class="section-title">{{content.section_tips}}</h2>
+        <div class="tips-grid">
+            {{#tips}}
+            <article class="tip-card">
+                <a href="{{url}}">
+                    <h4>{{title}}</h4>
+                    <p>{{summary}}</p>
+                </a>
+            </article>
+            {{/tips}}
+        </div>
+        {{#hasMoreTips}}
+        <div class="tips-more">
+            <a href="{{tipsOverviewUrl}}" class="btn btn-secondary">{{content.tips_more_link}}</a>
+        </div>
+        {{/hasMoreTips}}
+    </div>
+</section>

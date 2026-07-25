@@ -1,4 +1,9 @@
-.DS_Store
+dist/
 node_modules/
-.env
-.vscode/
+.DS_Store
+.claude/
+funda-sync/venv/
+*.pyc
+__pycache__/
+media/properties/
+website/images/properties/

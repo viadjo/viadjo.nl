@@ -1,0 +1,22 @@
+{
+  "name": "ViaDjo",
+  "tagline": "Your Personal Real Estate Agent in Amsterdam",
+  "address": {
+    "street": "1e Weteringdwarsstraat 62 hs",
+    "postcode": "1017 TP",
+    "city": "Amsterdam"
+  },
+  "phone": "06-41209868",
+  "phone_international": "+31641209868",
+  "email": "info@viadjo.nl",
+  "kvk": "73158593",
+  "url": "https://www.viadjo.nl",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/djoke-hoogland-0a854313/"
+  },
+  "owner": "Djoke Hoogland",
+  "typekit_id": "ehm6due",
+  "copyright": "2026 ViaDjo All rights reserved",
+  "credit": "Website: Bas van der Paardt",
+  "funda_broker_id": 80428
+}

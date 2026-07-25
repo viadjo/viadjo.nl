@@ -1,0 +1,43 @@
+{
+  "index": {
+    "title": "ViaDjo - Uw persoonlijke makelaar in Amsterdam",
+    "description": "ViaDjo is uw persoonlijke makelaar in Amsterdam. Kopen, verkopen of beleggen - Djoke Hoogland begeleidt u op de Amsterdamse woningmarkt.",
+    "og_title": "ViaDjo - Uw persoonlijke makelaar in Amsterdam",
+    "og_description": "Persoonlijke begeleiding bij vastgoed in Amsterdam. Kopen, verkopen en beleggen met lokale expertise.",
+    "og_image": "images/hero.jpg"
+  },
+  "terms": {
+    "title": "Algemene Voorwaarden - ViaDjo",
+    "description": "Algemene voorwaarden van ViaDjo, uw persoonlijke makelaar in Amsterdam.",
+    "og_title": "Algemene Voorwaarden - ViaDjo",
+    "og_description": "Algemene voorwaarden van ViaDjo makelaar Amsterdam."
+  },
+  "privacy": {
+    "title": "Privacyverklaring - ViaDjo",
+    "description": "Privacyverklaring van ViaDjo. Lees hoe wij omgaan met uw persoonsgegevens.",
+    "og_title": "Privacyverklaring - ViaDjo",
+    "og_description": "Privacyverklaring van ViaDjo makelaar Amsterdam."
+  },
+  "10-steps-buying": {
+    "title": "10 stappen tot een geslaagde aankoop - ViaDjo",
+    "description": "ViaDjo begeleidt u in 10 stappen bij het succesvol kopen van een woning in Amsterdam.",
+    "og_title": "10 stappen tot een geslaagde aankoop - ViaDjo",
+    "og_description": "10 stappen voor het succesvol kopen van een woning in Amsterdam met ViaDjo."
+  },
+  "10-steps-selling": {
+    "title": "10 stappen tot een geslaagde verkoop - ViaDjo",
+    "description": "ViaDjo begeleidt u in 10 stappen bij het succesvol verkopen van uw woning in Amsterdam.",
+    "og_title": "10 stappen tot een geslaagde verkoop - ViaDjo",
+    "og_description": "10 stappen voor het succesvol verkopen van uw woning in Amsterdam met ViaDjo."
+  },
+  "tips": {
+    "title": "Tips - ViaDjo",
+    "description": "Handige vastgoedtips voor Amsterdam van ViaDjo.",
+    "og_title": "Tips - ViaDjo",
+    "og_description": "Handige vastgoedtips voor Amsterdam van ViaDjo."
+  },
+  "404": {
+    "title": "Pagina niet gevonden - ViaDjo",
+    "description": "Deze pagina bestaat niet."
+  }
+}
