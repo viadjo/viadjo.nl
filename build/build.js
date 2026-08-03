@@ -663,6 +663,35 @@ function build() {
         fs.copyFileSync(manifestSrc, path.join(DIST, 'manifest.json'));
     }
 
+    // Generate sitemap.xml
+    console.log('  Generating sitemap.xml...');
+    const siteUrl = readJSON(path.join(METADATA, 'site.json')).url;
+    const today = new Date().toISOString().split('T')[0];
+    const sitemapUrls = [];
+
+    function collectUrls(dir, prefix) {
+        for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+            if (entry.isDirectory()) {
+                collectUrls(path.join(dir, entry.name), prefix + entry.name + '/');
+            } else if (entry.name.endsWith('.html') && entry.name !== '404.html') {
+                const loc = entry.name === 'index.html'
+                    ? siteUrl + '/' + prefix
+                    : siteUrl + '/' + prefix + entry.name;
+                sitemapUrls.push(loc);
+            }
+        }
+    }
+    collectUrls(DIST, '');
+
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(loc => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${today}</lastmod>
+  </url>`).join('\n')}
+</urlset>`;
+    fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap, 'utf-8');
+
     console.log(`\nDone! Output: ${DIST}/`);
     console.log(`  ${totalPages} pages built (${languages.map(l => l.lang).join(' + ')})`);
 }
