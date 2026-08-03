@@ -434,6 +434,13 @@ function buildTipPage(tip, lang, siteData, components) {
 
     let html = renderTemplate(pageBody, data);
 
+    const siteUrl = siteData.site.url;
+    const tipPath = lang === 'en' ? `en/tips/${tip.slug}.html` : `tips/${tip.slug}.html`;
+    const canonicalUrl = `${siteUrl}/${tipPath}`;
+    const nlUrl = `${siteUrl}/tips/${tip.slug}.html`;
+    const enUrl = `${siteUrl}/en/tips/${tip.slug}.html`;
+    const ogImage = `${siteUrl}/images/hero.jpg`;
+
     return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -441,9 +448,15 @@ function buildTipPage(tip, lang, siteData, components) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${tip.title} - ViaDjo</title>
     <meta name="description" content="${tip.summary || ''}">
+    <link rel="canonical" href="${canonicalUrl}">
+    <link rel="alternate" hreflang="nl" href="${nlUrl}">
+    <link rel="alternate" hreflang="en" href="${enUrl}">
+    <link rel="alternate" hreflang="x-default" href="${nlUrl}">
     <meta property="og:title" content="${tip.title} - ViaDjo">
     <meta property="og:description" content="${tip.summary || ''}">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="${canonicalUrl}">
+    <meta property="og:image" content="${ogImage}">
     <link rel="icon" href="${assetPrefix}images/favicon-32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="${assetPrefix}images/favicon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="${assetPrefix}images/apple-touch-icon.png">
@@ -538,6 +551,47 @@ function buildPage(pageFile, lang, siteData, components) {
     // Render the page body (component includes + variables)
     let html = renderTemplate(pageBody, data);
 
+    // SEO: canonical, hreflang, og:url, absolute og:image
+    const siteUrl = siteData.site.url;
+    const pagePath = pageFile === 'index.html'
+        ? (lang === 'en' ? 'en/' : '')
+        : (lang === 'en' ? `en/${pageFile}` : pageFile);
+    const canonicalUrl = `${siteUrl}/${pagePath}`;
+    const nlPath = pageFile === 'index.html' ? '' : pageFile;
+    const enPath = pageFile === 'index.html' ? 'en/' : `en/${pageFile}`;
+    const nlUrl = `${siteUrl}/${nlPath}`;
+    const enUrl = `${siteUrl}/${enPath}`;
+    const ogImage = seoData.og_image
+        ? (seoData.og_image.startsWith('http') ? seoData.og_image : `${siteUrl}/${seoData.og_image}`)
+        : `${siteUrl}/images/hero.jpg`;
+
+    // Structured data for homepage
+    const structuredData = pageFile === 'index.html' ? `
+    <script type="application/ld+json">
+    ${JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": siteData.site.name,
+        "description": seoData.description || '',
+        "url": siteUrl,
+        "telephone": siteData.site.phone_international,
+        "email": siteData.site.email,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": siteData.site.address.street,
+            "postalCode": siteData.site.address.postcode,
+            "addressLocality": siteData.site.address.city,
+            "addressCountry": "NL"
+        },
+        "image": `${siteUrl}/images/hero.jpg`,
+        "sameAs": [siteData.site.social.linkedin],
+        "areaServed": {
+            "@type": "City",
+            "name": "Amsterdam"
+        }
+    }, null, 2)}
+    </script>` : '';
+
     // Wrap in full HTML document
     const fullHtml = `<!DOCTYPE html>
 <html lang="${lang}">
@@ -546,15 +600,20 @@ function buildPage(pageFile, lang, siteData, components) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${seoData.title || 'ViaDjo'}</title>
     <meta name="description" content="${seoData.description || ''}">
+    <link rel="canonical" href="${canonicalUrl}">
+    <link rel="alternate" hreflang="nl" href="${nlUrl}">
+    <link rel="alternate" hreflang="en" href="${enUrl}">
+    <link rel="alternate" hreflang="x-default" href="${nlUrl}">
     ${seoData.og_title ? `<meta property="og:title" content="${seoData.og_title}">` : ''}
     ${seoData.og_description ? `<meta property="og:description" content="${seoData.og_description}">` : ''}
     <meta property="og:type" content="website">
-    ${seoData.og_image ? `<meta property="og:image" content="${seoData.og_image}">` : ''}
+    <meta property="og:url" content="${canonicalUrl}">
+    <meta property="og:image" content="${ogImage}">
     <link rel="icon" href="${assetPrefix}images/favicon-32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="${assetPrefix}images/favicon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="${assetPrefix}images/apple-touch-icon.png">
     <link rel="manifest" href="${assetPrefix}manifest.json">
-    <link rel="stylesheet" href="${assetPrefix}css/style.css">
+    <link rel="stylesheet" href="${assetPrefix}css/style.css">${structuredData}
 </head>
 <body${pageMeta.bodyClass ? ` class="${pageMeta.bodyClass}"` : ''}>
 ${html}
@@ -691,6 +750,11 @@ ${sitemapUrls.map(loc => `  <url>
   </url>`).join('\n')}
 </urlset>`;
     fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap, 'utf-8');
+
+    // Generate robots.txt
+    console.log('  Generating robots.txt...');
+    fs.writeFileSync(path.join(DIST, 'robots.txt'),
+        `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`, 'utf-8');
 
     console.log(`\nDone! Output: ${DIST}/`);
     console.log(`  ${totalPages} pages built (${languages.map(l => l.lang).join(' + ')})`);
