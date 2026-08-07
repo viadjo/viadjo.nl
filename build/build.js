@@ -8,7 +8,8 @@
  *   - website/css/         → concatenated into style.css
  *   - website/js/          → concatenated into script.js
  *   - website/images/      → copied as-is
- *   - content/             → markdown content files
+ *   - source/content/      → markdown content (submodule: viadjo-source)
+ *   - brand/               → brand assets + fonts (submodule: viadjo-brand)
  *   - metadata/            → JSON configuration
  *   - media/               → property images
  *
@@ -22,7 +23,8 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const WEBSITE = path.join(ROOT, 'website');
-const CONTENT = path.join(ROOT, 'content');
+const CONTENT = path.join(ROOT, 'source', 'content');
+const BRAND = path.join(ROOT, 'brand');
 const METADATA = path.join(ROOT, 'metadata');
 const MEDIA = path.join(ROOT, 'media');
 const DIST = path.join(ROOT, 'dist');
@@ -704,13 +706,17 @@ function build() {
     ensureDir(path.join(DIST, 'js'));
     fs.writeFileSync(path.join(DIST, 'js', 'script.js'), concatJS(), 'utf-8');
 
-    // Copy fonts
+    // Copy fonts from brand submodule
     console.log('  Copying fonts...');
-    copyDirRecursive(path.join(WEBSITE, 'fonts'), path.join(DIST, 'fonts'));
+    copyDirRecursive(path.join(BRAND, 'fonts', 'barlow'), path.join(DIST, 'fonts'));
 
-    // Copy images (shared, in root)
+    // Copy images (website-specific)
     console.log('  Copying images...');
     copyDirRecursive(path.join(WEBSITE, 'images'), path.join(DIST, 'images'));
+
+    // Copy brand assets into images
+    console.log('  Copying brand assets...');
+    copyDirRecursive(path.join(BRAND, 'assets'), path.join(DIST, 'images'));
 
     // Copy property images from media/
     console.log('  Copying property images...');

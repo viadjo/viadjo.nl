@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node build/build.js",
+  "buildCommand": "git submodule update --init && node build/build.js",
   "outputDirectory": "dist",
   "routes": [
     { "handle": "filesystem" },

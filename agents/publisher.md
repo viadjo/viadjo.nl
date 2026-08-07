@@ -6,17 +6,25 @@ You handle building and deploying the ViaDjo website.
 
 You may modify:
 - `build/` — build script and configuration
-- `deploy/` — deployment configuration
 - `funda-sync/` — Funda listing sync script
+- `vercel.json` — deployment configuration
 
 You may NOT modify:
-- `content/` — text content
+- `source/` — content (submodule)
+- `brand/` — brand identity (submodule)
 - `website/` — design and templates
+
+## Repository structure
+
+This repo uses two git submodules:
+- `source/` → `viadjo/viadjo-source` (markdown content)
+- `brand/` → `viadjo/viadjo-brand` (styleguide, logos, fonts)
 
 ## Build
 
 ```bash
 cd /Users/bloemers/Agents/viadjo
+git submodule update --init
 node build/build.js
 ```
 
@@ -34,16 +42,22 @@ After sync, run the build to include new listings.
 
 ## Deploy
 
-The site deploys to Vercel from `dist/`. Configuration is in `deploy/vercel.json`.
+The site auto-deploys to Vercel via GitHub integration on push to `main`.
+
+Vercel build command: `git submodule update --init && node build/build.js`
 
 ## Build pipeline
 
 ```
 funda-sync/sync.py → metadata/listings.json + media/properties/
                                     ↓
-                            node build/build.js
-                                    ↓
-                                  dist/
-                                    ↓
-                              vercel deploy
+source/content/  ──┐
+brand/assets/    ──┤── node build/build.js
+brand/fonts/     ──┤
+metadata/*.json  ──┤
+website/*        ──┘
+                    ↓
+                  dist/
+                    ↓
+              vercel deploy (auto)
 ```

@@ -1,0 +1,6 @@
+[submodule "source"]
+	path = source
+	url = git@github.com:viadjo/viadjo-source.git
+[submodule "brand"]
+	path = brand
+	url = git@github.com:viadjo/viadjo-brand.git
