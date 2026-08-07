@@ -19,7 +19,8 @@ You may NOT modify:
 ## CSS structure
 
 CSS is split into component files, concatenated in this order:
-1. `variables.css` — custom properties (colors, fonts, spacing)
+1. `fonts.css` — @font-face declarations (Barlow, self-hosted)
+2. `variables.css` — custom properties (colors, fonts, spacing)
 2. `base.css` — reset, typography, buttons, layout utilities
 3. `header.css` — site header + navigation
 4. `hero.css` — hero section
@@ -41,7 +42,7 @@ Key variables:
 - `--color-accent: #64b7bf` (teal)
 - `--color-cta: #d9602d` (orange)
 - `--color-primary: #101213` (near-black)
-- `--font-family: urw-din` (Adobe Typekit)
+- `--font-family: 'Barlow'` (self-hosted, SIL Open Font License)
 
 ## Template syntax
 
